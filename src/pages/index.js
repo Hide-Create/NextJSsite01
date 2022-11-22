@@ -1,0 +1,41 @@
+import Image from "next/legacy/image";
+import Link from "next/link";
+import Layout from "../components/layout";
+import * as styles from "../styles/index.module.scss"
+
+const Index = () => {
+  return (
+    <Layout>
+      <div className={styles.hero}>
+        <Image src="/images/index-hero.jpg" alt="hero" layout="fill" objectFit="cover" quality={90} />
+        <div className={styles.textCotainer}>
+          <h1>I'm Kotani Hideaki!</h1>
+          <h3>JavaScript Developer</h3>
+        </div>
+      </div>
+      <div className={styles.container}>
+        <div className={styles.profile}>
+          <div>
+            <h2>JavaScript Nerd</h2>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+          </div>
+          <Image src="/images/profile.jpg" alt="hero" height={1195} width={1000} quality={90} />
+        </div>
+        <div className={styles.skills}>
+          <h2>Skills</h2>
+          <div className={styles.skillsContainer}>
+            <div><img src="/images/javascript.svg" alt="javascript" /><span>JavaScript / 10 years</span></div>
+            <div><img src="/images/react.svg" alt="react" /><span>React / 5 years</span></div>
+            <div><img src="/images/gatsby.svg" alt="gatsby" /><span>Gatsby / 3 years</span></div>
+            <div><img src="/images/next.svg" alt="next" /><span>Next.JS / 3 years</span></div>
+          </div>
+        </div>
+        <div className={styles.ctaButton}>
+          <Link href="/contact">Make It Happen !</Link>
+        </div>
+      </div>
+    </Layout>
+  )
+};
+
+export default Index
